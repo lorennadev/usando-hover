@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap; /* todos os flex items quebrarão em uma linha*/
+    justify-content: space-between; /*define o espaçamenteo entre os elementos do conteiner*/
+    background-color: antiquewhite;
+    align-items: center; /*alinha a horizontal*/
+    height: 80px;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+}
+
+#list-plus  {
+    position: absolute;
+    background-color: bisque;
+    display: block;
+    
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: stretch; /* ítens em cada linha esticam para ocupar o espaço remanescente entre elas. no eixo transversal*/
+}
+
+.card {
+    background-color: #000;
+    min-height: 300px;
+    min-width: 300px;
+    flex-grow: 1; /*Diz qual peso terá cada elemento em questão da distribuição de linha, adicionado o valor min, ele distribui entre as linhas*/
+    margin: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.card1 {
+    background-color: red;
+    order: 5; /*reordena os items*/
+}
+.card2 {
+    order: 4;
+}
+.card3 {
+    order: 3;
+}
+.card4 {
+    order: 2;
+}
+.card5 {
+    order: 1;
+}
+.card6 {
+    order: 0;
+}
+
+#banner {
+    background-color: black;
+    height: 600px;
+    width: 100%;
+}
+
+#apresentation {
+    font-size: 20px;
+    margin: 10px;
+    max-width: 50%;
+}
+
+#image {
+    background-image: url(https://api.lorem.space/image/ai?w=600&h=600);
+    margin: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    height: 80%;
+
+}
+
+#content-apresentation {
+    display: flex;
+    height: 600px;
+    margin: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#footer {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+#redes {
+    flex-grow: 1;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#redes a {
+    flex-grow: 1;
+}
+
+#text-footer {
+    flex-grow: 1;
+}
+
+footer h2 {
+    background-color: #000;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+/* flex-shrink 
+flex-basis
+
+    Define o tamanho padrão para um elemento
+  antes que o espaço remanescente do container
+  seja distribuído. Pode ser um comprimento 
+  (por exemplo, 20%, 5rem, etc) ou uma palavra-chave. 
+  A palavra-chave auto significa "observe minhas 
+  propriedades de altura ou largura" (o que era feito 
+  pela palavra-chave main-size, que foi depreciada). 
+  A palavra-chave content significa "estabeleça o 
+  tamanho com base no conteúdo interno do ítem" - essa 
+  palavra-chave ainda não tem muito suporte, então não é
+  fácil de ser testada, assim como suas relacionadas: 
+  max-content, min-content e fit-content. 
+  
+   .flex-item {
+    flex-shrink: <número>;  o valor padrão é 0 
+   }
+    */
+
+    /* flex 
+    
+    Esta é a propriedade shorthand para flex-grow, 
+    flex-shrink e flex-basis, combinadas. O segundo 
+    e terceiro parâmetros (flex-shrink e flex-basis) 
+    são opcionais. O padrão é 0 1 auto, 
+    mas se você definir com apenas um número, 
+    é equivalente a 0 1.
+    
+      .item {
+    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    }
+    
+    */
+
+    /* align-self
+
+    Permite que o alinhamento padrão (ou o que estiver definido por align-items)
+     seja sobrescrito para ítens individuais.
+
+    .item {
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+     }
+     */
+
+
+     /* Funcionalidade para o dropdown  */
+
+
+
+     
+        
+        #list-plus {
+        display: none;
+     }
+        
+        #plus:hover {
+        background-color: #000;
+        color: #fff;
+     }
+
+     #plus:hover #list-plus {
+        display: block;
+        color: #000;
+        z-index: 1;
+        padding: 20px;
+     }
